@@ -46,6 +46,35 @@
     border-radius: 5px;
     border: 1px solid #ddd;
   }
+
+/* for service location table */
+  .service-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  .service-table th,
+  .service-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    vertical-align: top;
+  }
+
+  .service-table input[type="text"] {
+    width: 90%;
+    padding: 6px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+
   </style>
 </head>
 <body>
@@ -55,13 +84,13 @@
   <form action="#" method="POST" enctype="multipart/form-data">
     <div class="section">
       <label>Business Name <br><small>பதிவுசெய்யப்பட்ட வணிகப் பெயர்</small></label>
-      <input type="text" placeholder="E.g.: GreenTech Solutions Pvt. Ltd.">
+      <input name="businessName" type="text" placeholder="E.g.: GreenTech Solutions Pvt. Ltd.">
 
       <label>Year of Establishment <br><small>நிறுவப்பட்ட ஆண்டு</small></label>
-      <input type="number" placeholder="E.g.: 2018">
+      <input type="number" name="yearofEstablishment" placeholder="E.g.: 2018">
 
     <label>Business Category <br><small>வணிகத்தின் பிரிவு</small></label>
-<select name="business_category">
+<select name="businessCategory">
   <option value="">-- Select Category --</option>
   <option>Accounting & Bookkeeping</option>
   <option>Advertising & Branding</option>
@@ -153,7 +182,7 @@
 <option>Water Purification & Supply</option>
 <option>Wholesale Distribution</option>
 <option>Writing & Publishing</option>
-<option>Yoga & Alternative Healing</option>
+<option>Mind & Body Wellness</option>
 
   <option>Other</option>
 </select>
@@ -249,32 +278,32 @@
 
 
       <label>Business Registration Number <br><small>வணிகப் பதிவு எண்</small></label>
-      <input type="text" placeholder="E.g.: UDYAM-TN-02-0012345">
+      <input type="text" name="businessregistrationNumber" placeholder="E.g.: UDYAM-TN-02-0012345">
 
       <label>Business Phone Number <br><small>வணிக தொலைபேசி எண்</small></label>
-      <input type="tel" placeholder="E.g.: +91 98765 43210">
+      <input type="tel" name="businessphoneNumber" placeholder="E.g.: +91 98765 43210">
 
       <label>Business Email Address <br><small>வணிக மின்னஞ்சல் முகவரி</small></label>
-      <input type="email" placeholder="E.g.: contact@greentechsolutions.com">
+      <input type="email" name="businessemailAddress" placeholder="E.g.: contact@greentechsolutions.com">
 
       <label>Business Website <br><small>வணிக இணையதளம்</small></label>
-      <input type="url" placeholder="E.g.: www.greentechsolutions.com">
+      <input type="url" name="businessWebsite" placeholder="E.g.: www.greentechsolutions.com">
 
       <label>Any One Social Media Profile (Optional) <br><small>உங்கள் சமூக ஊடக பக்கங்கள் (வேண்டுமானால்)</small></label>
-      <input type="url" placeholder="E.g.: https://facebook.com/yourbusinessname">
+      <input type="url" name="socialmediaProfile" placeholder="E.g.: https://facebook.com/yourbusinessname">
 
       <label>Gender Identity <br><small>இனம்</small></label>
-      <select>
+      <select name="genderIdentity">
         <option>Male</option>
         <option>Female</option>
        
       </select>
 
       <label>Business Address <br><small>வணிக முகவரி</small></label>
-      <textarea placeholder="E.g.: 123, Anna Salai, Chennai – 600018, Tamil Nadu, India."></textarea>
+      <textarea name="businessAddress" placeholder="E.g.: 123, Anna Salai, Chennai – 600018, Tamil Nadu, India."></textarea>
 
   <label>Business State <br><small>வணிக மாநிலம்</small></label>
-<select id="business_state" onchange="updateDistricts()" name="business_state">
+<select id="business_state" name="businessState" onchange="updateDistricts()" >
   <option value="">-- Select State or Union Territory --</option>
 
   <!-- 28 States -->
@@ -323,7 +352,7 @@
       
 
 <label>Business District <br><small>வணிக மாவட்டம்</small></label>
-<select id="business_district" name="business_district">
+<select id="business_district" name="businessDistrict">
   <option value="">-- Select District --</option>
 </select>
 
@@ -370,31 +399,153 @@ function toggleOtherInput() {
  
 
       <label>About Your Business <br><small>உங்கள் வணிகத்தைப் பற்றிச் சொல்லுங்கள்</small></label>
-      <textarea placeholder="E.g.: We are a renewable energy company specializing in solar panel installation and maintenance..."></textarea>
+      <textarea name="aboutyourBusiness" placeholder="E.g.: We are a renewable energy company specializing in solar panel installation and maintenance..."></textarea>
 
       <label>What Sets You Apart from Competitors? <br><small>போட்டி நிறுவனங்களைவிட உங்கள் வணிகத்தின் தனித்துவம் என்ன?</small></label>
-      <textarea placeholder="E.g.: We offer personalized customer service, competitive pricing..."></textarea>
+      <textarea name="uniqueness" placeholder="E.g.: We offer personalized customer service, competitive pricing..."></textarea>
 
-      <label>Service Locations <br><small>நீங்கள் சேவை அளிக்கும் பகுதிகள்</small></label>
-      <input type="text" placeholder="E.g.: Chennai, Tamil Nadu (or) India, Qatar (or) Tuticorin, Thanjavur">
+     <label>Service Locations <br><small>நீங்கள் சேவை அளிக்கும் பகுதிகள்</small></label> <br/>
+<div style="overflow-x:auto;" class="table-container">
+  <table  class="service-table" border="1" cellpadding="10" cellspacing="0" style="width: 100%; text-align: center;">
+    <thead>
+      <tr>
+        <th>Location 1</th>
+        <th>Location 2</th>
+        <th>Location 3</th>
+        <th>Location 4</th>
+        <th>Location 5</th>
+        <th>Location 6</th>
+        <th>Location 7</th>
+        <th>Location 8</th>
+        <th>Location 9</th>
+        <th>Location 10</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" name="country1" placeholder="Country" /></td>
+        <td><input type="text" name="country2" placeholder="Country" /></td>
+        <td><input type="text" name="country3" placeholder="Country" /></td>
+        <td><input type="text" name="country4" placeholder="Country" /></td>
+        <td><input type="text" name="country5" placeholder="Country" /></td>
+        <td><input type="text" name="country6" placeholder="Country" /></td>
+        <td><input type="text" name="country7" placeholder="Country" /></td>
+        <td><input type="text" name="country8" placeholder="Country" /></td>
+        <td><input type="text" name="country9" placeholder="Country" /></td>
+        <td><input type="text" name="country10" placeholder="Country" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="state1" placeholder="State" /></td>
+        <td><input type="text" name="state2" placeholder="State" /></td>
+        <td><input type="text" name="state3" placeholder="State" /></td>
+        <td><input type="text" name="state4" placeholder="State" /></td>
+        <td><input type="text" name="state5" placeholder="State" /></td>
+        <td><input type="text" name="state6" placeholder="State" /></td>
+        <td><input type="text" name="state7" placeholder="State" /></td>
+        <td><input type="text" name="state8" placeholder="State" /></td>
+        <td><input type="text" name="state9" placeholder="State" /></td>
+        <td><input type="text" name="state10" placeholder="State" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="district1" placeholder="District" /></td>
+        <td><input type="text" name="district2" placeholder="District" /></td>
+        <td><input type="text" name="district3" placeholder="District" /></td>
+        <td><input type="text" name="district4" placeholder="District" /></td>
+        <td><input type="text" name="district5" placeholder="District" /></td>
+        <td><input type="text" name="district6" placeholder="District" /></td>
+        <td><input type="text" name="district7" placeholder="District" /></td>
+        <td><input type="text" name="district8" placeholder="District" /></td>
+        <td><input type="text" name="district9" placeholder="District" /></td>
+        <td><input type="text" name="district10" placeholder="District" /></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
       <label>Annual Turnover in ₹ (confidentiality will be maintained) <br><small>வருடாந்த வருவாய் (ரகசியமாக வைத்திருக்கும்)</small></label>
-      <input type="text" placeholder="E.g.: 25,00,000">
+      <input type="text" name="annualTurnover" placeholder="E.g.: 25,00,000">
 
       <label>Photograph of Authorized Representative <br><small>உங்கள் வணிக பிரதிநிதியின் புகைப்படம்</small></label>
-      <input type="file" accept="image/*">
+      <input type="file" name="photoofRepresentative" accept="image/*">
 
       <label>Share Relevant Photo (if any) <br><small>வணிகத்துடன் தொடர்புடைய புகைப்படம்</small><br><small>E.g.: Visiting card</small></label>
-      <input type="file" accept="image/*">
+      <input type="file" name="relevantPhoto" accept="image/*">
 
       <label>Upload Business Profile (PDF) <br><small>வணிக சுயவிவரம் (PDF)</small><br><small>E.g.: Upload your company brochure or business profile in PDF format</small></label>
-      <input type="file" accept="application/pdf" multiple>
+      <input type="file" name="businessProfile" accept="application/pdf" multiple>
 
       <label>What do you expect from RIFAH? <br><small>ரிஃபா நிறுவனத்திடம் நீங்கள் எதிர்பார்ப்பது என்ன?</small></label>
-      <textarea placeholder="E.g.: I expect RIFAH to create networking opportunities..."></textarea>
+      <textarea name="expectation" placeholder="E.g.: I expect RIFAH to create networking opportunities..."></textarea>
 
       <button type="submit">Submit</button>
     </div>
   </form>
+
+
+
+  <script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = {};
+
+    // Collect all form fields
+    formData.forEach((value, key) => {
+      if (data[key]) {
+        if (Array.isArray(data[key])) {
+          data[key].push(value);
+        } else {
+          data[key] = [data[key], value];
+        }
+      } else {
+        data[key] = value;
+      }
+    });
+
+    // Ensure checkboxes collected properly
+    data["services"] = formData.getAll("services");
+
+    // Add country1 to country10
+    for (let i = 1; i <= 10; i++) {
+      data["country" + i] = formData.get("country" + i) || "";
+    }
+
+    // Add state1 to state10
+    for (let i = 1; i <= 10; i++) {
+      data["state" + i] = formData.get("state" + i) || "";
+    }
+
+    // Add district1 to district10
+    for (let i = 1; i <= 10; i++) {
+      data["district" + i] = formData.get("district" + i) || "";
+    }
+
+    try {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbx0hXmpZjM64-cia81MdVWLoerFqYI_dcJJkY_OoLgdXG6JaP59klLlpV9CJl2Lnr7Mdg/exec", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.ok) {
+        alert("Form submitted successfully!");
+        form.reset();
+      } else {
+        alert("There was an error submitting the form.");
+      }
+    } catch (error) {
+      alert("Submission failed. Please check your internet or try again.");
+    }
+  });
+</script>
+
+
+
 </body>
 </html>
