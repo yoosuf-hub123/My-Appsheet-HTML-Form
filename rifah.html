@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RIFAH Chamber of Commerce and Industry - Member Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    h1 {
+      color: #004080;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    small {
+      color: #555;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  </style>
+</head>
+<body>
+  <h1>RIFAH CHAMBER OF COMMERCE AND INDUSTRY</h1>
+  <p >This form collects details of registered members of RIFAH Chamber of Commerce and Industry.</p>
+
+  <form action="#" method="POST" enctype="multipart/form-data">
+    <div class="section">
+      <label>Business Name <br><small>பதிவுசெய்யப்பட்ட வணிகப் பெயர்</small></label>
+      <input type="text" placeholder="E.g.: GreenTech Solutions Pvt. Ltd.">
+
+      <label>Year of Establishment <br><small>நிறுவப்பட்ட ஆண்டு</small></label>
+      <input type="number" placeholder="E.g.: 2018">
+
+    <label>Business Category <br><small>வணிகத்தின் பிரிவு</small></label>
+<select name="business_category">
+  <option value="">-- Select Category --</option>
+  <option>Accounting & Bookkeeping</option>
+  <option>Advertising & Branding</option>
+  <option>App Development</option>
+  <option>Architecture & Construction</option>
+  <option>Automobile Services</option>
+  <option>Beauty & Wellness</option>
+  <option>Business Consulting</option>
+  <option>Catering Services</option>
+  <option>Cleaning Services</option>
+  <option>Content Writing</option>
+  <option>Courier & Delivery Services</option>
+  <option>Customer Support</option>
+  <option>Digital Marketing</option>
+  <option>E-commerce</option>
+  <option>Education & Tutoring</option>
+  <option>Electrical Services</option>
+  <option>Event Management</option>
+  <option>Export & Import</option>
+  <option>Fashion & Apparel</option>
+  <option>Financial Services</option>
+  <option>Fitness & Gym Services</option>
+  <option>Food & Beverage</option>
+  <option>Freelance Services</option>
+  <option>Graphic Design</option>
+  <option>Healthcare & Medical Services</option>
+  <option>Interior Design</option>
+  <option>IT Services & Support</option>
+  <option>Legal Services</option>
+  <option>Logistics & Transportation</option>
+  <option>Maintenance & Repair</option>
+  <option>Manufacturing</option>
+  <option>Marketing Services</option>
+  <option>Media & Entertainment</option>
+  <option>NGO / Non-profit</option>
+  <option>Pet Services</option>
+  <option>Photography & Videography</option>
+  <option>Printing & Publishing</option>
+  <option>Real Estate</option>
+  <option>Recruitment & Staffing</option>
+  <option>Retail & Wholesale</option>
+  <option>Security Services</option>
+  <option>Software Development</option>
+  <option>Tailoring & Fashion Design</option>
+  <option>Technology & Innovation</option>
+  <option>Telecom Services</option>
+  <option>Textile & Garments</option>
+  <option>Tourism & Travel Services</option>
+  <option>Training & Skill Development</option>
+  <option>Web Design & Development</option>
+  <option>Other</option>
+</select>
+
+
+
+  <label>List of Services Offered <br><small>நீங்கள் வழங்கும் சேவைகள்</small></label>
+<div class="checkbox-group">
+  <label><input type="checkbox" name="services" value="Accounting"> &nbsp;Accounting & Bookkeeping</label>
+  <label><input type="checkbox" name="services" value="Advertising"> &nbsp;Advertising & Branding</label>
+  <label><input type="checkbox" name="services" value="App Development"> &nbsp;App Development</label>
+  <label><input type="checkbox" name="services" value="Architecture"> &nbsp;Architecture & Construction</label>
+  <label><input type="checkbox" name="services" value="Automobile"> &nbsp;Automobile Services</label>
+  <label><input type="checkbox" name="services" value="Beauty"> &nbsp;Beauty & Wellness</label>
+  <label><input type="checkbox" name="services" value="Consulting"> &nbsp;Business Consulting</label>
+  <label><input type="checkbox" name="services" value="Catering"> &nbsp;Catering Services</label>
+  <label><input type="checkbox" name="services" value="Cleaning"> &nbsp;Cleaning Services</label>
+  <label><input type="checkbox" name="services" value="Content Writing"> &nbsp;Content Writing</label>
+  <label><input type="checkbox" name="services" value="Courier"> &nbsp;Courier & Delivery Services</label>
+  <label><input type="checkbox" name="services" value="Customer Support"> &nbsp;Customer Support</label>
+  <label><input type="checkbox" name="services" value="Digital Marketing"> &nbsp;Digital Marketing</label>
+  <label><input type="checkbox" name="services" value="E-commerce"> &nbsp;E-commerce</label>
+  <label><input type="checkbox" name="services" value="Education"> &nbsp;Education & Tutoring</label>
+  <label><input type="checkbox" name="services" value="Electrical"> &nbsp;Electrical Services</label>
+  <label><input type="checkbox" name="services" value="Event Management"> &nbsp;Event Management</label>
+  <label><input type="checkbox" name="services" value="Export Import"> &nbsp;Export & Import</label>
+  <label><input type="checkbox" name="services" value="Fashion"> &nbsp;Fashion & Apparel</label>
+  <label><input type="checkbox" name="services" value="Finance"> &nbsp;Financial Services</label>
+  <label><input type="checkbox" name="services" value="Fitness"> &nbsp;Fitness & Gym Services</label>
+  <label><input type="checkbox" name="services" value="Food"> &nbsp;Food & Beverage</label>
+  <label><input type="checkbox" name="services" value="Freelance"> &nbsp;Freelance Services</label>
+  <label><input type="checkbox" name="services" value="Graphic Design"> &nbsp;Graphic Design</label>
+  <label><input type="checkbox" name="services" value="Healthcare"> &nbsp;Healthcare & Medical Services</label>
+  <label><input type="checkbox" name="services" value="Interior Design"> &nbsp;Interior Design</label>
+  <label><input type="checkbox" name="services" value="IT Support"> &nbsp;IT Services & Support</label>
+  <label><input type="checkbox" name="services" value="Legal"> &nbsp;Legal Services</label>
+  <label><input type="checkbox" name="services" value="Logistics"> &nbsp;Logistics & Transportation</label>
+  <label><input type="checkbox" name="services" value="Repair"> &nbsp;Maintenance & Repair</label>
+  <label><input type="checkbox" name="services" value="Manufacturing"> &nbsp;Manufacturing</label>
+  <label><input type="checkbox" name="services" value="Marketing"> &nbsp;Marketing Services</label>
+  <label><input type="checkbox" name="services" value="Media"> &nbsp;Media & Entertainment</label>
+  <label><input type="checkbox" name="services" value="NGO"> &nbsp;NGO / Non-profit</label>
+  <label><input type="checkbox" name="services" value="Pet Services"> &nbsp;Pet Services</label>
+  <label><input type="checkbox" name="services" value="Photography"> &nbsp;Photography & Videography</label>
+  <label><input type="checkbox" name="services" value="Printing"> &nbsp;Printing & Publishing</label>
+  <label><input type="checkbox" name="services" value="Real Estate"> &nbsp;Real Estate</label>
+  <label><input type="checkbox" name="services" value="Recruitment"> &nbsp;Recruitment & Staffing</label>
+  <label><input type="checkbox" name="services" value="Retail"> &nbsp;Retail & Wholesale</label>
+  <label><input type="checkbox" name="services" value="Security"> &nbsp;Security Services</label>
+  <label><input type="checkbox" name="services" value="Software"> &nbsp;Software Development</label>
+  <label><input type="checkbox" name="services" value="Tailoring"> &nbsp;Tailoring & Fashion Design</label>
+  <label><input type="checkbox" name="services" value="Technology"> &nbsp;Technology & Innovation</label>
+  <label><input type="checkbox" name="services" value="Telecom"> &nbsp;Telecom Services</label>
+  <label><input type="checkbox" name="services" value="Textile"> &nbsp;Textile & Garments</label>
+  <label><input type="checkbox" name="services" value="Tourism"> &nbsp;Tourism & Travel Services</label>
+  <label><input type="checkbox" name="services" value="Training"> &nbsp;Training & Skill Development</label>
+  <label><input type="checkbox" name="services" value="Web Development"> &nbsp;Web Design & Development</label>
+
+</div>
+
+
+      <label>Business Registration Number <br><small>வணிகப் பதிவு எண்</small></label>
+      <input type="text" placeholder="E.g.: UDYAM-TN-02-0012345">
+
+      <label>Business Phone Number <br><small>வணிக தொலைபேசி எண்</small></label>
+      <input type="tel" placeholder="E.g.: +91 98765 43210">
+
+      <label>Business Email Address <br><small>வணிக மின்னஞ்சல் முகவரி</small></label>
+      <input type="email" placeholder="E.g.: contact@greentechsolutions.com">
+
+      <label>Business Website <br><small>வணிக இணையதளம்</small></label>
+      <input type="url" placeholder="E.g.: www.greentechsolutions.com">
+
+      <label>Any One Social Media Profile (Optional) <br><small>உங்கள் சமூக ஊடக பக்கங்கள் (வேண்டுமானால்)</small></label>
+      <input type="url" placeholder="E.g.: https://facebook.com/yourbusinessname">
+
+      <label>Gender Identity <br><small>இனம்</small></label>
+      <select>
+        <option>Male</option>
+        <option>Female</option>
+       
+      </select>
+
+      <label>Business Address <br><small>வணிக முகவரி</small></label>
+      <textarea placeholder="E.g.: 123, Anna Salai, Chennai – 600018, Tamil Nadu, India."></textarea>
+
+  <label>Business State <br><small>வணிக மாநிலம்</small></label>
+<select id="business_state" onchange="updateDistricts()" name="business_state">
+  <option value="">-- Select State or Union Territory --</option>
+
+  <!-- 28 States -->
+  <option>Andhra Pradesh</option>
+  <option>Arunachal Pradesh</option>
+  <option>Assam</option>
+  <option>Bihar</option>
+  <option>Chhattisgarh</option>
+  <option>Goa</option>
+  <option>Gujarat</option>
+  <option>Haryana</option>
+  <option>Himachal Pradesh</option>
+  <option>Jharkhand</option>
+  <option>Karnataka</option>
+  <option>Kerala</option>
+  <option>Madhya Pradesh</option>
+  <option>Maharashtra</option>
+  <option>Manipur</option>
+  <option>Meghalaya</option>
+  <option>Mizoram</option>
+  <option>Nagaland</option>
+  <option>Odisha</option>
+  <option>Punjab</option>
+  <option>Rajasthan</option>
+  <option>Sikkim</option>
+  <option>Tamil Nadu</option>
+  <option>Telangana</option>
+  <option>Tripura</option>
+  <option>Uttar Pradesh</option>
+  <option>Uttarakhand</option>
+  <option>West Bengal</option>
+
+  <!-- 8 Union Territories -->
+  <option>Andaman and Nicobar Islands</option>
+  <option>Chandigarh</option>
+  <option>Dadra and Nagar Haveli and Daman and Diu</option>
+  <option>Delhi</option>
+  <option>Jammu and Kashmir</option>
+  <option>Ladakh</option>
+  <option>Lakshadweep</option>
+  <option>Puducherry</option>
+</select>
+
+
+
+      
+
+<label>Business District <br><small>வணிக மாவட்டம்</small></label>
+<select id="business_district" name="business_district">
+  <option value="">-- Select District --</option>
+</select>
+
+<script>
+  const districts = {
+    "Tamil Nadu": [
+      "Ariyalur", "Chengalpattu", "Chennai", "Coimbatore", "Cuddalore", "Dharmapuri", "Dindigul", "Erode",
+      "Kallakurichi", "Kanchipuram", "Kanyakumari", "Karur", "Krishnagiri", "Madurai", "Mayiladuthurai", "Nagapattinam",
+      "Namakkal", "Nilgiris", "Perambalur", "Pudukkottai", "Ramanathapuram", "Ranipet", "Salem", "Sivaganga", "Tenkasi",
+      "Thanjavur", "Theni", "Thiruvallur", "Thiruvarur", "Thoothukudi", "Tiruchirappalli", "Tirunelveli", "Tirupathur",
+      "Tiruppur", "Tiruvannamalai", "Vellore", "Viluppuram", "Virudhunagar"
+    ],
+    "Kerala": [
+      "Alappuzha", "Ernakulam", "Idukki", "Kannur", "Kasaragod", "Kollam", "Kottayam", "Kozhikode",
+      "Malappuram", "Palakkad", "Pathanamthitta", "Thiruvananthapuram", "Thrissur", "Wayanad"
+    ]
+    // Add more states and their districts here
+  };
+
+  function updateDistricts() {
+    const state = document.getElementById("business_state").value;
+    const districtSelect = document.getElementById("business_district");
+
+    // Clear current options
+    districtSelect.innerHTML = '<option value="">-- Select District --</option>';
+
+    if (districts[state]) {
+      districts[state].forEach(function (district) {
+        const option = document.createElement("option");
+        option.value = district;
+        option.text = district;
+        districtSelect.appendChild(option);
+      });
+    }
+  }
+function toggleOtherInput() {
+  const otherCheckbox = document.getElementById("otherCheckbox");
+  const otherInput = document.getElementById("otherServiceInput");
+  otherInput.style.display = otherCheckbox.checked ? 'block' : 'none';
+}
+
+</script>
+
+ 
+
+      <label>About Your Business <br><small>உங்கள் வணிகத்தைப் பற்றிச் சொல்லுங்கள்</small></label>
+      <textarea placeholder="E.g.: We are a renewable energy company specializing in solar panel installation and maintenance..."></textarea>
+
+      <label>What Sets You Apart from Competitors? <br><small>போட்டி நிறுவனங்களைவிட உங்கள் வணிகத்தின் தனித்துவம் என்ன?</small></label>
+      <textarea placeholder="E.g.: We offer personalized customer service, competitive pricing..."></textarea>
+
+      <label>Service Locations <br><small>நீங்கள் சேவை அளிக்கும் பகுதிகள்</small></label>
+      <input type="text" placeholder="E.g.: Chennai, Tamil Nadu (or) India, Qatar (or) Tuticorin, Thanjavur">
+
+      <label>Annual Turnover in ₹ (confidentiality will be maintained) <br><small>வருடாந்த வருவாய் (ரகசியமாக வைத்திருக்கும்)</small></label>
+      <input type="text" placeholder="E.g.: 25,00,000">
+
+      <label>Photograph of Authorized Representative <br><small>உங்கள் வணிக பிரதிநிதியின் புகைப்படம்</small></label>
+      <input type="file" accept="image/*">
+
+      <label>Share Relevant Photo (if any) <br><small>வணிகத்துடன் தொடர்புடைய புகைப்படம்</small><br><small>E.g.: Visiting card</small></label>
+      <input type="file" accept="image/*">
+
+      <label>Upload Business Profile (PDF) <br><small>வணிக சுயவிவரம் (PDF)</small><br><small>E.g.: Upload your company brochure or business profile in PDF format</small></label>
+      <input type="file" accept="application/pdf" multiple>
+
+      <label>What do you expect from RIFAH? <br><small>ரிஃபா நிறுவனத்திடம் நீங்கள் எதிர்பார்ப்பது என்ன?</small></label>
+      <textarea placeholder="E.g.: I expect RIFAH to create networking opportunities..."></textarea>
+
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+</html>
